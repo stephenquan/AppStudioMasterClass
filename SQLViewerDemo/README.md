@@ -74,7 +74,7 @@ if (query.first()) {
 
 ## 3. Error handling
 
-If the query failed, the error parameter will be not null. You can test for it, and, if it exists, it will be set to an error object.be set to an JSON error object.
+If the query failed, the error parameter will be not null. You can test for it, and, if it exists, it will be set to an JSON error object.
 
 ```qml
 var query = db.query("CRAP");
