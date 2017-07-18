@@ -1,0 +1,60 @@
+{
+    "arcgisRuntime": 0,
+    "capabilities": {
+        "audio": true,
+        "bluetooth": true,
+        "camera": true,
+        "location": true,
+        "microphone": true,
+        "network": true,
+        "storage": true
+    },
+    "deployment": {
+        "android": {
+            "packageName": ""
+        },
+        "arcgisRuntimeExtensionsLicense": "",
+        "arcgisRuntimeLicense": "",
+        "clientId": "",
+        "ios": {
+            "bundleId": ""
+        },
+        "macos": {
+            "bundleId": "",
+            "codeSignIdentity": ""
+        },
+        "winphone": {
+            "packageDisplayName": "",
+            "packageName": "",
+            "productID": "",
+            "publisherDisplayName": "",
+            "publisherID": ""
+        }
+    },
+    "display": {
+        "desktop": {
+            "minimumHeight": 0,
+            "minimumWidth": 0
+        },
+        "phone": {
+            "landscape": true,
+            "portrait": true
+        },
+        "tablet": {
+            "landscape": true,
+            "portrait": true
+        }
+    },
+    "mainFile": "SQLViewerDemo.qml",
+    "projectFile": "SQLViewerDemo.qmlproject",
+    "properties": {
+    },
+    "resources": {
+    },
+    "type": "app",
+    "urlScheme": "",
+    "version": {
+        "major": 1,
+        "micro": 2
+    }
+}

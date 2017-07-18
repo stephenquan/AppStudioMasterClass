@@ -1,0 +1,57 @@
+{
+    "access": "org",
+    "accessInformation": null,
+    "appCategories": [
+    ],
+    "avgRating": 0,
+    "banner": null,
+    "categories": [
+    ],
+    "commentsEnabled": true,
+    "created": 1500343444000,
+    "culture": "en-us",
+    "description": "\n<p style=' margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'>This app shows how to create a SQL Lite database and to perform a query on it.</p>",
+    "documentation": null,
+    "extent": [
+    ],
+    "guid": null,
+    "id": "dee3ccf7b2724d25bcc043a2c3969093",
+    "industries": [
+    ],
+    "itemControl": "admin",
+    "languages": [
+    ],
+    "largeThumbnail": null,
+    "licenseInfo": null,
+    "listed": false,
+    "modified": 1500356286000,
+    "name": "dee3ccf7b2724d25bcc043a2c3969093.zip",
+    "numComments": 2,
+    "numRatings": 0,
+    "numViews": 0,
+    "owner": "squan888",
+    "ownerFolder": null,
+    "properties": null,
+    "protected": false,
+    "proxyFilter": null,
+    "screenshots": [
+    ],
+    "size": 5623,
+    "snippet": "SQL Viewer Demo",
+    "spatialReference": null,
+    "tags": [
+    ],
+    "thumbnail": "thumbnail/thumbnail.png",
+    "title": "SQL Viewer Demo",
+    "type": "Native Application",
+    "typeKeywords": [
+        "API_QML",
+        "App",
+        "Application",
+        "AppStudio",
+        "Configuration",
+        "Native",
+        "qml"
+    ],
+    "url": null
+}
