@@ -146,7 +146,7 @@ var query2 = db.query(
 
 ## 7. SqlQueryModel
 
-SqlQueryModel abd SqkTabkeNidek are read-only data models for SQL result sets. The following demonstrates how you can populate a TableView using a SqlQueryModel.
+SqlQueryModel and SqlTableModel are read-only data models for SQL result sets. The following demonstrates how you can populate a TableView using a SqlQueryModel.
 
 ```qml
 import QtQuick 2.8
