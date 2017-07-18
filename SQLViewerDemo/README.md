@@ -15,15 +15,20 @@ In AppStudio 2.0 you can:
 To get a taste of the Sql support, we will be covering the following.
 
 1. Minimal app - open a SQLite database
-2. Running queries
-3. Error handling
-4. Looping through results
-5. Prepared and parameterized queries
-6. Autoincrement field
-7. SqlQueryModel
-8. SQL Viewer Demo
 
-1. Minimal app - open a SQLite database
+2. Running queries
+
+3. Error handling
+
+4. Looping through results
+
+5. Prepared and parameterized queries
+
+6. Autoincrement field
+
+7. SqlQueryModel
+
+**1. Minimal app - open a SQLite database**
 
 This minimal working sample opens a SQLite database in your home directory called ArcGIS/Data/Sql/sample.sqlite. The code works on all platforms. On Android, Linux, Windows and Mac platform, the database created and can be access by other apps. On iOS, the database will be sandboxed to your application, i.e. only your application may access it.
 
@@ -53,7 +58,7 @@ Item {
 }
 ```
 
-2. Running queries.
+**2. Running queries**
 
 To run a SQL query, we use the SqlDatabase's query method. This function is overloaded, i.e. there are multiple, very useful ways of calling query. The most simplest is passing in a single string parameter and that query will be prepared and executed all in one go.
 
@@ -65,7 +70,7 @@ if (query.first()) {
 }
 ```
 
-3. Error handling.
+**3. Error handling**
 
 If the query failed, the error parameter will be not null. You can test for it, and, if it exists, it will be set to an error object.be set to an JSON error object.
 
@@ -88,10 +93,10 @@ Output:
   "driverText": "Unable to execute statement",
   "text": "near \"CRAP\": syntax error Unable to execute statement",
   "nativeErrorCode": "1"
-}‍‍‍‍‍‍‍‍
+}
 ```
 
-4. Looping through results.
+**4. Looping through results**
 
 If your query is a select statement, it will return data via the values JSON object property. The values property will contain values corresponding to one row of results. To get all the results we need to access them in a loop. Note that when we iterate through results, it's always important to call finish(). If you forget, the query could lock the database in an unfinished transaction which may prevent future operations such as DROP TABLE.
 
@@ -111,10 +116,10 @@ Output:
 ```
 qml: {"RoadID":1,"RoadName":"Coventry","RoadType":"St"}
 qml: {"RoadID":2,"RoadName":"Sturt","RoadType":"St"}
-qml: {"RoadID":3,"RoadName":"Kings","RoadType":"Way"}‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+qml: {"RoadID":3,"RoadName":"Kings","RoadType":"Way"}
 ```
 
-5. Prepared and parametized queries.
+**5. Prepared and parametized queries**
 
 A number of commands have been overloaded to support parametized syntax. Using parametized queries diligently can stop accidental bugs or malicious attacks via SQL injection. You can bind to a parameter via name (e.g. ":name") or via position (e.g. "?"). In practice, I always recommend binding parameters by name, because it's stricter and safer. Parameterized queries go well with prepared queries. This is when you offer one SQL statement for repeated execution. The following shows how you can use this approach to populate a table.
 
@@ -125,7 +130,7 @@ insert.executePrepared( { "name": "Bank", "type": "St" } );
 insert.executePrepared( { "name": "Dorcas", "type": "St" } );
 ```
 
-6. Autoincrement field.
+**6. Autoincrement field.**
 
 If your table has an autoincrement field you may want to query its value so that you can use it. This is useful if that field is used in a relationship. i.e. you want to populate a related table using the value of the autoincrement field. The value of the last autoincrement operation is in the insertId property.
 
@@ -135,10 +140,9 @@ var roadID = query.insertId;
 var query2 = db.query(
     "INSERT INTO Inspections (RoadID, Quality) VALUES (:id, :quality)",
     { "id": roadID, "quality": "good" } );
-‍‍‍
 ```
 
-7. SqlQueryModel
+**7. SqlQueryModel**
 
 SqlQueryModel abd SqkTabkeNidek are read-only data models for SQL result sets. The following demonstrates how you can populate a TableView using a SqlQueryModel.
 
@@ -184,5 +188,5 @@ Item {
     var queryModel = db.queryModel("SELECT * FROM Roads");
     tableView.model = queryModel;
   }
-}‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+}
 ```
