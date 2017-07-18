@@ -190,3 +190,7 @@ Item {
   }
 }
 ```
+
+Output:
+
+![https://raw.githubusercontent.com/stephenquan/AppStudioMasterClass/master/images/SQLViewer.png](https://raw.githubusercontent.com/stephenquan/AppStudioMasterClass/master/images/SQLViewer.png)
