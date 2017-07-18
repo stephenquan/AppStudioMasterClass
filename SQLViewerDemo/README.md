@@ -159,7 +159,7 @@ Item {
 
   TableView {
     id: tableView
-	anchors.fill: parent
+    anchors.fill: parent
     TableViewColumn {
       role: "RoadID"
       title: "Road ID"
